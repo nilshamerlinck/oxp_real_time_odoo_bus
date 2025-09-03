@@ -1,0 +1,28 @@
+<odoo>
+    <record id="sale_order_view_form_dashboard" model="ir.ui.view">
+        <field name="name">sale.order.view.form.dashboard</field>
+        <field name="model">sale.order</field>
+        <field name="arch" type="xml">
+            <form>
+                <widget name="sale_dashboard"/>
+                <footer>
+                    <button string="Close" class="btn-primary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="sale_order_action_view_dashboard" model="ir.actions.act_window">
+        <field name="name">Sale Dashboard</field>
+        <field name="res_model">sale.order</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="view_id" ref="sale_order_view_form_dashboard"/>
+    </record>
+    <menuitem
+        id="sale_dashboard_menu"
+        action="sale_order_action_view_dashboard"
+        parent="sale.sale_order_menu"
+        sequence="100"
+    />
+</odoo>

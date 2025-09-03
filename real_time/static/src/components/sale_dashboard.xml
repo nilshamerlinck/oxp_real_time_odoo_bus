@@ -1,0 +1,14 @@
+<odoo>
+    <t t-name="real_time.SaleDashboard">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">Sales today:</div>
+                <div class="col-9"><span t-esc="state.salesToday"/></div>
+            </div>
+            <div class="row">
+                <div class="col-3">Last SO:</div>
+                <div class="col-9"><span t-esc="state.lastSaleOrderName"/></div>
+            </div>
+        </div>
+    </t>
+</odoo>
