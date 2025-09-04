@@ -8,8 +8,7 @@ class SaleOrder(models.Model):
     def create(self, vals_list):
         orders = super().create(vals_list)
         if orders:
-            self.env['bus.bus']._sendone(
-                'sale_dashboard',
+            self.env.ref('real_time.group_sale_dashboard')._bus_send(
                 'sale_order_update',
                 {
                     'message': 'New SOs Created',

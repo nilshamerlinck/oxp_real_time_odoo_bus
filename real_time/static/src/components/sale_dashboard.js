@@ -17,7 +17,6 @@ export class SaleDashboard extends Component {
             this._fetchData();
         })
         this.busService = this.env.services.bus_service;
-        this.busService.addChannel('sale_dashboard');
         this.busService.subscribe('sale_order_update', this._handleNotification.bind(this));
     }
 

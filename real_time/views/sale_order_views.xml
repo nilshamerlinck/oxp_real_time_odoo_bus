@@ -24,5 +24,6 @@
         action="sale_order_action_view_dashboard"
         parent="sale.sale_order_menu"
         sequence="100"
+        groups="real_time.group_sale_dashboard"
     />
 </odoo>

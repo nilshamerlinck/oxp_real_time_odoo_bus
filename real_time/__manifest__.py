@@ -8,6 +8,7 @@
     'author': 'Paco Coca',
     'license': 'GPL-3',
     'data': [
+        'security/real_time_groups.xml',
         'views/sale_order_views.xml',
     ],
     'depends': [
