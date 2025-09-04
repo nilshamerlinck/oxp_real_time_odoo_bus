@@ -31,10 +31,8 @@ export class SaleDashboard extends Component {
         this.state.lastSaleOrderName = last_so_name;
     }
 
-    _handleNotification(payload) {
-        const { n_sos, last_so_name } = payload;
-        this.state.salesToday += n_sos;
-        this.state.lastSaleOrderName = last_so_name;
+    async _handleNotification(payload) {
+        this._fetchData();
     }
 }
 

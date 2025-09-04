@@ -13,8 +13,6 @@ class SaleOrder(models.Model):
                 'sale_order_update',
                 {
                     'message': 'New SOs Created',
-                    'n_sos': len(orders),
-                    'last_so_name': orders[-1].name,
                 },
             )
         return orders
