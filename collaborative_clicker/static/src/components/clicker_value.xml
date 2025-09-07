@@ -1,0 +1,8 @@
+<odoo>
+    <t t-name="collaborative_clicker.ClickerValue">
+        <div class="row">
+            <div class="col-3">Value:</div>
+            <div class="col-9"><span t-esc="state.clicks"/></div>
+        </div>
+    </t>
+</odoo>

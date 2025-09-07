@@ -1,0 +1,13 @@
+<odoo>
+    <menuitem
+        id="clicker_menu_root"
+        name="Clicker"
+    >
+        <menuitem
+            id="clicker_game_menu"
+            name="Games"
+            action="clicker_game_action_view"
+            sequence="10"
+        />
+    </menuitem>
+</odoo>

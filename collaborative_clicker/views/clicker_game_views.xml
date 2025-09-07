@@ -1,0 +1,43 @@
+<odoo>
+    <record id="clicker_game_view_form" model="ir.ui.view">
+        <field name="name">clicker.game.view.form</field>
+        <field name="model">clicker.game</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_click" type="object" string="Click!" class="btn-primary d-inline"/>
+                    <button name="action_improve_increment" type="object" string="Upgrade" class="btn-secondary"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="create_uid" string="Owner"/>
+                        </group>
+                        <group>
+                            <field name="clicks" invisible="1"/>
+                            <widget name="clicker_value"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="clicker_game_view_list" model="ir.ui.view">
+        <field name="name">clicker.game.view.list</field>
+        <field name="model">clicker.game</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="create_uid" string="Owner"/>
+                <field name="clicks"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="clicker_game_action_view" model="ir.actions.act_window">
+        <field name="name">Games</field>
+        <field name="res_model">clicker.game</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>
